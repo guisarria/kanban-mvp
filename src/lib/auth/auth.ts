@@ -5,8 +5,8 @@ import GitHub from "next-auth/providers/github"
 import { eq } from "drizzle-orm"
 import { accounts, users } from "../db/schema"
 import Credentials from "next-auth/providers/credentials"
-import { LoginSchema } from "@/features/auth/schemas/login-schema"
 import bcrypt from "bcrypt"
+import { SignInSchema } from "@/features/auth/schemas/sign-in-schema"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: DrizzleAdapter(db),
@@ -55,7 +55,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
     Credentials({
       authorize: async (credentials) => {
-        const validatedFields = LoginSchema.safeParse(credentials)
+        const validatedFields = SignInSchema.safeParse(credentials)
         if (!validatedFields.success) return null
 
         const { email, password } = validatedFields.data
