@@ -74,7 +74,9 @@ export const UserButton = ({ user }: Session) => {
           <DropdownMenuSeparator />
 
           <DropdownMenuItem
-            onClick={() => router.push("/dashboard/settings")}
+            onClick={() =>
+              router.push("/dashboard/settings", { prefetch: true })
+            }
             className="group py-2 font-medium cursor-pointer  ease-in-out "
           >
             <Settings

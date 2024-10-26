@@ -145,7 +145,9 @@ export const SignInForm = () => {
               <FormError message={error} />
 
               <Button size={"sm"} className="px-0" variant={"link"} asChild>
-                <Link href="/reset">Forgot your password</Link>
+                <Link href="/reset" prefetch={true}>
+                  Forgot your password
+                </Link>
               </Button>
             </div>
 

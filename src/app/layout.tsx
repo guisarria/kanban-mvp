@@ -5,6 +5,8 @@ import "./globals.css"
 import Nav from "@/components/navigation/nav"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 
+export const experimental_ppr = true
+
 const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({
@@ -24,7 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Nav />
-          <main className="max-w-7xl px-14 mx-auto border-x h-full flex flex-col justify-center">
+          <main className="max-w-7xl mx-auto border-x h-full flex flex-col justify-center">
             {children}
           </main>
         </ThemeProvider>

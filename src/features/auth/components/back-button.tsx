@@ -13,7 +13,7 @@ export const BackButton = ({
 }) => {
   return (
     <Button asChild variant={"link"} className="font-medium w-full">
-      <Link aria-label={label} href={href}>
+      <Link aria-label={label} href={href} prefetch={true}>
         {label}
       </Link>
     </Button>

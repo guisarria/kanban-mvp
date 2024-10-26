@@ -23,7 +23,7 @@ export default async function Nav() {
           {!session ? (
             <li className="flex items-center justify-center gap-x-8">
               <Button variant="secondary" asChild>
-                <Link className="flex gap-2" href="/sign-in">
+                <Link className="flex gap-2" href="/sign-in" prefetch={true}>
                   <LogIn size={16} />
                   <p>Sign In</p>
                 </Link>

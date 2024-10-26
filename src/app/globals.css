@@ -6,6 +6,7 @@
 html,
 body {
   @apply h-screen;
+  text-rendering: optimizeLegibility;
 }
 
 @layer base {
